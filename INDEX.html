@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<head>
+    <h1>kot</h1>
+</head>
+<body>
+
+
+<canvas id="canv" width="300" height="300" ></canvas>
+
+<script>
+const cav = document.getElementById('canv');
+const ctx = cav.getContext('2d');
+
+let x = 145;
+let y = 145;
+let currentColor = 'black';
+
+function draw() {
+    ctx.fillStyle = 'white';
+    ctx.fillRect(0, 0, 300, 300);
+    ctx.fillStyle = currentColor;
+    ctx.fillRect(x, y, 30, 30);
+}
+
+function move(event) {
+    if (event.key === 'D') {
+        x += 10;
+    }
+
+    if (event.key === 'A') {
+        x -= 10;
+    }
+
+    if (event.key === 'S') {
+        y += 10;
+    }
+
+    if (event.key === 'W') {
+        y -= 10;
+    }
+
+    if (event.key === 'P' || event.key === 'p') {
+        currentColor = 'pink';
+    }
+
+    if (event.key === 'B' ) {
+        currentColor = 'white';
+    }
+
+    if (event.key === 'O' || event.key === 'o') {
+        currentColor = 'orange';
+    }
+
+    draw();
+}
+
+window.addEventListener('keydown', move);
+
+draw();
+</script>
+
+<p>KOT LATOK</p>
+
+
+<ul>
+    <li>Kustini kvadrātu ar bultām</li>
+    <li>P - roza</li>
+    <li>B - balta</li>
+    <li>O - oranžs</li>
+</ul>
+
+<img src="https://www.sheba.pl/sites/g/files/fnmzdf7906/files/2023-03/co-moze-jesc-kot_-produkty-ktore-smialo-mozesz-wcielic-do-jego-diety_optimized_1597650834564_0.jpeg" width="150px" height="150px"> 
+
+<p>Attels <a href="https://www.google.com/search?sca_esv=07eb3e101ba9f47f&rlz=1C1GCEA_enLV1159&q=kot&udm=2&fbs=ABzOT_DHx86Mf4330JR8nbgRgmqNNdpn5oeySwNEArOZ4jREdJkTMp00VZgIZaidmHHKVVHbfhCEvI0JSEg0Osv9DeUoBgYoE86chfM_YlWC9CRdfwSu6pQpUU5UbRlmA8XlIkCiY_BvR75Q7_ISapysAJFLKHhf60djxMmZpHdua2sLlIZrZweS0suYMwtxc0CVATwO5c5dhzJWyYrlpoS6dVnt2MTh-w&sa=X&ved=2ahUKEwigicz2lPCMAxVSIRAIHfqGHVMQtKgLegQIExAB&biw=1036&bih=711&dpr=1.25#vhid=FSOw51qTN9rJjM&vssid=mosaic" target="_blank">KOT</a> </p>
+
+
+
+
+</body>
+</html>
